@@ -11,50 +11,64 @@
 body {
     font-family: 'Delius', sans-serif;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
+    margin: 2%;
+    padding: 1%;
     background-color: var(--background);
     color: var(--text);
     line-height: 1.6;
+    box-sizing: border-box;
+}
+
+.red-text {
+    color: red;
+    font-size: xx-large;
+    font-style: oblique;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Condiment', cursive;
     font-weight: 700;
     color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
 html {
     font-size: 100%; /* 16px default */
 }
 
+/* Responsive font-size for headings */
 h1 {
     font-size: 4.210rem; /* 67.36px */
-    margin-bottom: 0.5rem; /* Adds space below the h1 */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 h2 {
     font-size: 3.158rem; /* 50.56px */
-    margin-bottom: 0.5rem; /* Adds space below the h2 */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 h3 {
     font-size: 2.369rem; /* 37.92px */
-    margin-bottom: 0.5rem; /* Adds space below the h3 */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 h4 {
     font-size: 1.777rem; /* 28.48px */
-    margin-bottom: 0.5rem; /* Adds space below the h4 */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 h5 {
     font-size: 1.333rem; /* 21.28px */
-    margin-bottom: 0.5rem; /* Adds space below the h5 */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 small {
-    font-size: 0.750rem; /* 12px */
+    font-size: 0.875rem; /* 14px for better readability */
     color: var(--secondary);
 }
 
@@ -67,28 +81,29 @@ p {
 /* Section styles */
 section {
     padding: 2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 2rem 0;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.8);
+    box-shadow: 10px 4px 6px rgba(105, 90, 255, 0.69);
     position: relative;
+    transition: padding 0.3s ease, margin 0.3s ease;
 }
 
 section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
     width: 100%;
     height: 100%;
     background: rgba(226, 101, 227, 10%);
     filter: blur(10px);
-    z-index: -1; /* Make sure background stays behind content */
+    z-index: -1;
 }
 
 section h2, section h3 {
     color: var(--accent);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* Links */
@@ -103,24 +118,152 @@ a:hover {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 3.5rem; /* Adjusting h1 for large screens like tablets */
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h5 {
+        font-size: 1.2rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    p {
+        font-size: 1.05rem; /* Slightly larger text for readability on tablets */
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        margin: 1.5%;
+        padding: 1.5%;
+    }
+
     h1 {
         font-size: 3.158rem; /* 50.56px on small screens */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Smaller glow */
     }
 
     h2 {
         font-size: 2.369rem; /* 37.92px */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Smaller glow */
     }
 
     h3 {
         font-size: 1.777rem; /* 28.48px */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Smaller glow */
     }
 
     h4 {
         font-size: 1.333rem; /* 21.28px */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Smaller glow */
     }
 
     h5 {
         font-size: 1.0rem; /* 16px */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 1%;
+        padding: 1%;
+    }
+
+    h1 {
+        font-size: 2.8rem; /* 45px */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h2 {
+        font-size: 2rem; /* 32px */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* 24px */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h4 {
+        font-size: 1.2rem; /* 19px */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    h5 {
+        font-size: 1rem; /* 16px */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Smaller glow */
+    }
+
+    p {
+        font-size: 0.95rem; /* 15px for smaller screens */
+    }
+
+    section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+/* Mobile-first style for the smallest screens */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 2rem; /* 32px */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); /* Even smaller glow */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* 24px */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); /* Even smaller glow */
+    }
+
+    h3 {
+        font-size: 1.25rem; /* 20px */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); /* Even smaller glow */
+    }
+
+    h4 {
+        font-size: 1rem; /* 16px */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); /* Even smaller glow */
+    }
+
+    h5 {
+        font-size: 0.875rem; /* 14px */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); /* Even smaller glow */
+    }
+
+    p {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    section {
+        padding: 0.75rem;
+        margin: 0.75rem 0;
     }
 }
