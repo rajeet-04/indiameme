@@ -295,7 +295,7 @@ a:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 481px) {
     .title-image {
         width: 70%; /* Makes image even smaller on very small screens */
         max-width: 300px;
