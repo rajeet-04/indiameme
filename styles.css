@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Condiment:700|Delius:400');
+/*@import url('https://fonts.googleapis.com/css?family=Condiment:700|Delius:400');*/
 
 :root {
     --text: #ffffff;
     --background: #181818;
-    --primary: #ce47e3;
+    --primary: #ffffff;
     --secondary: #b3b3b3;
-    --accent: #ce47e3;
+    --accent: #ffffff;
 }
 
 body {
-    font-family: 'Delius', sans-serif;
+    font-family: 'Times New Roman', "Sans Serif Collection";
     font-weight: 400;
     margin: 2%;
     padding: 1%;
@@ -26,7 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Condiment', cursive;
+    font-family: 'Calibri';
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 0.5rem;
@@ -84,7 +84,7 @@ section {
     border-radius: 8px;
     margin: 2rem 0;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 10px 4px 6px rgba(105, 90, 255, 0.69);
+    box-shadow: 10px 4px 6px rgba(105, 90, 255, 0.1);
     position: relative;
     transition: padding 0.3s ease, margin 0.3s ease;
 }
